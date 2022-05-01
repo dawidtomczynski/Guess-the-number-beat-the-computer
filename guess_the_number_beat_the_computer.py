@@ -8,7 +8,7 @@ while not ans == "zgadłeś":
         guess = int((max-min) / 2) + min
         print("Zgaduję:", guess)
         ans = input("")
-        if ans == "za":
+        if ans == "za mało":
             min = guess
         elif ans == "za dużo":
             max = guess
