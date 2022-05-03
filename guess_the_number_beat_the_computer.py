@@ -1,25 +1,25 @@
-print("Pomyśl liczbę od 0 do 1000, a ja ją zgadnę w max. 10 próbach")
+print("Think about the number from 0 to 1000 and I will guess it in maximum of ten tries.")
 
 min_num = 0
 max_num = 1000
 ans = ""
 ans_list = []
-while not ans == "zgadłeś":
+while not ans == "you won":
     while not len(ans_list) == 10:
         guess = int((max_num-min_num) / 2) + min_num
-        print("Zgaduję:", guess)
+        print("My guess:", guess)
         ans = input("")
-        if ans == "za mało":
-            min = guess
+        if ans == "too small":
+            min_num = guess
             ans_list.append(ans)
-        elif ans == "za dużo":
-            max = guess
+        elif ans == "too big":
+            max_num = guess
             ans_list.append(ans)
-        elif ans == "zgadłeś":
-            print("Wygrałem!")
+        elif ans == "you won":
+            print("I won!")
             break
         else:
-            print("Podaj: za mało, za dużo lub zgadłeś.")
+            print("Type: too small, too big, you win.")
     else:
-        print("Nie oszukuj!")
+        print("Don't cheat")
         break
